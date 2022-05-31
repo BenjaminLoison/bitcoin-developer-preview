@@ -7,7 +7,7 @@ pub type Satoshi = u64;
 /// A reference to a transaction output.
 #[derive(CandidType, Clone, Debug, Deserialize, PartialEq, Eq, Hash)]
 pub struct OutPoint {
-    pub txid: Vec<u8>,
+    pub tx_id: Vec<u8>,
     pub vout: u32,
 }
 

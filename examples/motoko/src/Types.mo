@@ -31,7 +31,7 @@ module Types {
 
     // A reference to a transaction output.
     public type OutPoint = {
-        txid : Blob;
+        tx_id : Blob;
         vout : Nat32;
     };
 

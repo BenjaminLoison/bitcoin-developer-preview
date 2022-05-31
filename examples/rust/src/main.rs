@@ -155,7 +155,7 @@ pub async fn send(amount: u64, destination: String) {
         SPENT_TXOS.with(|spent_txos| {
             print(&format!("Caching {:?}", tx_in.previous_output.txid.to_vec()));
             spent_txos.borrow_mut().insert(OutPoint {
-                txid: tx_in.previous_output.txid.to_vec(),
+                tx_id: tx_in.previous_output.txid.to_vec(),
                 vout: tx_in.previous_output.vout,
             })
         });
